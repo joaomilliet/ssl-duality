@@ -1,0 +1,26 @@
+{
+  "aahext": 1,
+  "hubApi": 1,
+  "id": "com.jpmm.jpmm-ssl-duality",
+  "name": "SSL Duality Control",
+  "vendor": "jpmm",
+  "version": "0.1.0",
+  "namespace": "jpmm-ssl-duality",
+  "kind": "python",
+  "entry": "ssl_duality",
+  "requires": {
+    "python": "3.9"
+  },
+  "access": {
+    "hosts": [],
+    "files": "none",
+    "macos": [],
+    "network": {
+      "local": {
+        "send": {"udp": [50081], "broadcast": true},
+        "receive": {"udp": [50081]}
+      }
+    }
+  },
+  "notes": "Controls an SSL Duality console over its Remote protocol on the local network (UDP 50081): reads projects, titles, Total Recall snapshots, mix passes and channel names; opens a title, stores and recalls snapshots, names channels and sets the clock. It needs to reach the console on the studio network and receive its answers on UDP 50081 (close DualityRemote while it is used)."
+}
